@@ -1,0 +1,15 @@
+<% min_port = @port.to_i %>
+<% max_port = @port.to_i + @mongrels.to_i %>
+
+<% for m in min_port..max_port do %>
+check process mongrel_<%= m %>
+  with pidfile <%= "#{@path}/shared/pids/mongrel.#{m}.pid" %>
+  group mongrels
+  start program = "mongrel_rails cluster::start -C <%= "#{@path}/shared/config/mongrel_cluster.yml" %> --clean --only <%= m %>
+  stop program = "mongrel_rails cluster::stop -C <%= "#{@path}/shared/config/mongrel_cluster.yml" %> --clean --only <%= m %>
+  if failed port <%= m %> protocol HTTP and request /
+    with timeout 10 seconds
+    then restart
+  if 5 restarts within 5 cycles
+    then timeout
+<% end %>
