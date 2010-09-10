@@ -15,7 +15,13 @@ define :mongrel_cluster do
     group params[:group]
     source "mongrel_cluster.yml.erb"
     cookbook "mongrel_cluster"
-    variables( :mongrels => params[:mongrels], :path => params[:path], :port => params[:port] )
+    variables( 
+              :name     => params[:name],
+              :mongrels => params[:mongrels], 
+              :path => params[:path], 
+              :port => params[:port], 
+              :user => params[:user], 
+              :group => params[:group] )
     notifies :restart, resources(:service =>"mongrel_cluster_#{params[:name]}")
   end
 
@@ -27,7 +33,12 @@ define :mongrel_cluster do
     group params[:group]
     source "mongrel_cluster.monitrc.erb"
     cookbook "mongrel_cluster"
-    variables( :mongrels => params[:mongrels], :path => params[:path] , :port => params[:port] )    
+    variables( 
+              :mongrels => params[:mongrels], 
+              :path => params[:path] , 
+              :port => params[:port],
+              :name => params[:name]
+              )    
     notifies :restart, resources(:service => "monit")
   end
 end
