@@ -18,8 +18,8 @@
 #
 
 execute "apt-get update" do
-  action :run
-  creates "/var/tmp/.first-apt-get-update"
+  action :nothing
 end
 
-file "/var/tmp/.first-apt-get-update"
+
+
