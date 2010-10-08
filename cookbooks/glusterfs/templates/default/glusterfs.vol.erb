@@ -33,15 +33,14 @@ volume readahead
     subvolumes writebehind
 end-volume
 
-volume quickread
-    type performance/quick-read
-    option cache-timeout 1
-    option max-file-size 64kB
-    subvolumes readahead
+volume io-cache 
+  type performance/io-cache
+  option cache-size 128MB             # default is 64MB
+  subvolumes readahead
 end-volume
 
 volume statprefetch
     type performance/stat-prefetch
-    subvolumes quickread
+    subvolumes io-cache
 end-volume
 

@@ -1,4 +1,10 @@
-package "glusterfs-server"
+repository "brightbox-gluster3" do
+  key_url    "http://apt.brightbox.net/release.asc"
+end
+
+package "glusterfs-server" do
+  action :install
+end
 
 service "glusterfs-server" do
   action :nothing
@@ -17,3 +23,7 @@ template "/etc/glusterfs/glusterfsd.vol" do
   notifies :restart, resources(:service => "glusterfs-server")
 end
 
+
+service "glusterfs-server" do
+  action :restart
+end
