@@ -21,10 +21,6 @@
 
   RequestHeader set X_FORWARDED_PROTO 'https'
 
-  <% if @params[:includes] %>
-    Include /etc/apache2/sites-conf/<%= @params[:name] =%>.conf
-  <% end %>
-
   <% if @params[:rails_env] %>   
     RailsBaseURI /
     RailsEnv <%= @params[:rails_env] %>
@@ -44,6 +40,7 @@
 
   RewriteCond %{DOCUMENT_ROOT}/system/maintenance.html -f
   RewriteCond %{SCRIPT_FILENAME} !maintenance.html
+  RewriteCond %{SCRIPT_FILENAME} !^(.+).(gif|jpg|css)$
   RewriteRule ^.*$ /system/maintenance.html [L]
 
   LogLevel info

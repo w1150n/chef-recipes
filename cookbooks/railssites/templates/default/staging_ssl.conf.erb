@@ -8,10 +8,6 @@
   RailsEnv <%= @params[:rails_env] %>
   <% end %>
 
-  <% if @params[:includes] %>
-    Include /etc/apache2/sites-conf/<%= @params[:name]-includes =%>.conf
-  <% end %>
-
   <Directory <%= @params[:docroot] %>>
     Options FollowSymLinks
     AllowOverride None
@@ -30,6 +26,7 @@
 
   RewriteCond %{DOCUMENT_ROOT}/system/maintenance.html -f
   RewriteCond %{SCRIPT_FILENAME} !maintenance.html
+  RewriteCond %{SCRIPT_FILENAME} !^(.+).(gif|jpg|css)$
   RewriteRule ^.*$ /system/maintenance.html [L]
 
   LogLevel info
@@ -48,10 +45,6 @@
 
 <% if @params[:certificatechainfile] %>
   SSLCertificateChainFile /etc/apache2/ssl/caauthority.crt
-<% end %>
-
-<% if @params[:includes] %>
-   Include /etc/apache2/sites-conf/<%= @params[:name]-includes =%>.conf
 <% end %>
 
   RequestHeader set X_FORWARDED_PROTO 'https'
@@ -81,6 +74,7 @@
 
   RewriteCond %{DOCUMENT_ROOT}/system/maintenance.html -f
   RewriteCond %{SCRIPT_FILENAME} !maintenance.html
+  RewriteCond %{SCRIPT_FILENAME} !^(.+).(gif|jpg|css)$
   RewriteRule ^.*$ /system/maintenance.html [L]
 
   LogLevel info
