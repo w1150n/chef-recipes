@@ -17,11 +17,12 @@ include_recipe "apt"
     action :create
   end
 
-  execute "add-key" do
-    command "wget #{params[:key_url]} -O - | sudo apt-key add -"
-    user "root"
+  remote_file "/tmp/#{params[:name]}-apt.key" do
+    params[:key_url] ?  (source params[:key_url])  : (source "#{params[:name]}.key")
+  end
+
+  execute "apt-key add /tmp/#{params[:name]}-apt.key" do
     creates "/var/tmp/.add-key-#{params[:name]}"
-    action :run
     notifies :run, resources(:execute => "apt-get update"), :immediately
   end
 
