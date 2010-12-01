@@ -10,7 +10,7 @@ denyhosts_start="/etc/init.d/denyhosts start"
 
 if ARGV.length!= 1
   puts "Wrong number of arguments"
-  puts "Usage: denyhosts-remove ip"
+  puts "Usage: unban-ip"
 else
 
   `#{denyhosts_stop}`
