@@ -6,11 +6,12 @@
 check process mongrel_<%= @name %>_<%= m %>
   with pidfile <%= "#{@path}/shared/pids/mongrel.#{m}.pid" %>
   group mongrels_<%= @name %>
-  start program = "<%= @node[:languages][:ruby][:bin_dir] %>/mongrel_rails cluster::start -C <%= "#{@path}/shared/config/mongrel_cluster.yml" %> --clean --only <%= m %>" <% if @mongrel_start_timeout %> with timeout <%= @mongrel_start_timeout %> seconds <% end %> for 2 cycles
+  start program = "<%= @node[:languages][:ruby][:bin_dir] %>/mongrel_rails cluster::start -C <%= "#{@path}/shared/config/mongrel_cluster.yml" %> --clean --only <%= m %>" <% if @mongrel_start_timeout %> with timeout <%= @mongrel_start_timeout %> seconds <% end %> 
   stop program  = "<%= @node[:languages][:ruby][:bin_dir] %>/mongrel_rails cluster::stop  -C <%= "#{@path}/shared/config/mongrel_cluster.yml" %> --clean --only <%= m %>"
   if failed port <%= m %> protocol HTTP and request /
-    with timeout 10 seconds
+    with timeout 10 seconds for 2 cycles
     then restart
-  if 5 restarts within 5 cycles
+<% if @memory_limit %> if totalmem is greater than <%= @memory_limit %> for 6 cycles then restart <% end %>
+  if 40 restarts within 40 cycles
     then timeout
 <% end %>
