@@ -8,6 +8,10 @@
   RailsEnv <%= @params[:rails_env] %>
   <% end %>
 
+  <% if @params[:passengerinstances] %>
+     PassengerMaxPoolSize <%= @params[:passengerinstances] %>
+  <% end %>
+  
   <Directory <%= @params[:docroot] %>>
     Options FollowSymLinks
     AllowOverride None
@@ -27,7 +31,7 @@
   RewriteCond %{DOCUMENT_ROOT}/system/maintenance.html -f
   RewriteCond %{SCRIPT_FILENAME} !maintenance.html
   RewriteCond %{SCRIPT_FILENAME} !^(.+).(gif|jpg|css)$
-  RewriteRule ^.*$ /system/maintenance.html [L]
+  RewriteRule ^.*$ /system/maintenance.html [R=503,L]  
 
   LogLevel info
   ErrorLog <%= @node[:apache][:log_dir] %>/<%= @params[:name] %>-error.log
@@ -75,7 +79,7 @@
   RewriteCond %{DOCUMENT_ROOT}/system/maintenance.html -f
   RewriteCond %{SCRIPT_FILENAME} !maintenance.html
   RewriteCond %{SCRIPT_FILENAME} !^(.+).(gif|jpg|css)$
-  RewriteRule ^.*$ /system/maintenance.html [L]
+  RewriteRule ^.*$ /system/maintenance.html [R=503,L]  
 
   LogLevel info
   ErrorLog <%= @node[:apache][:log_dir] %>/<%= @params[:name] %>-error.log

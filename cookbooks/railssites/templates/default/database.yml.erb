@@ -1,7 +1,8 @@
 production:
   encoding: utf8
-  adapter: mysql
+  adapter: <%= @adapter? @adapter : "mysql" %>
   database: <%= @dbname %>
   username: <%= @dbuser %>
   password: <%= @dbpasswd %>
   host:     <%= @dbhost %>
+
