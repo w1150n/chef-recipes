@@ -27,5 +27,6 @@ node[:logrotate][:services].each do |s|
     mode "0644"
     owner "root"
     group "root"
+    backup false
   end
 end
