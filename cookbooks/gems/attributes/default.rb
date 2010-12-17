@@ -1,7 +1,9 @@
-if File.exists?(ree[:path]) && File.directory?(ree[:path]) # If rubyee is installed with britghtbox repository gem_binary is the same than with standard ruby
-  set[:gems][:binary]=ree[:gem_path]
-else
-  set[:gems][:binary]="/usr/bin/gem"
+set[:gems][:binary]="/usr/bin/gem"
+
+if node.chef.attribute?("ree")
+  if File.exists?(ree[:path]) && File.directory?(ree[:path]) # If rubyee is installed with britghtbox repository gem_binary is the same than with standard ruby
+    set[:gems][:binary]=ree[:gem_path]
+  end
 end
 
 case platform_version
@@ -12,5 +14,5 @@ when "10.04"
 end
 
 set[:gems][:dependencies]=%w(libxslt1-dev libxml2 libxml2-dev imagemagick libfreeimage-dev) + dependencies
-set[:gems][:packages]=%w(mysql newrelic_rpm)
+set[:gems][:packages]=%w(mysql newrelic_rpm bundler)
 

@@ -27,21 +27,9 @@ end
 
 file "/var/tmp/.gem-sources"
 
-# Temporary fix when running chef 0.8 (bug between chef and rubygems 1.3.7)
-if node[:chef][:server_version]=~/0.8.(\d)+/
-  node[:gems][:packages].each do |p|
-    execute "gem-install #{p}" do
-      command "#{node[:gems][:binary]} install #{p} --no-rdoc --no-ri"
-      user "root"
-      creates "/var/tmp/.gem-#{p}"
-    end
-    file "/var/tmp/.gem-#{p}"
-  end
-else
-  node[:gems][:packages].each do |p|
-    gem_package p do
-      gem_binary node[:gems][:binary]
-      action :install
-    end
+node[:gems][:packages].each do |p|
+  gem_package p do
+    gem_binary node[:gems][:binary]
+    action :install
   end
 end
