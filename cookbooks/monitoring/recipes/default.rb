@@ -1,4 +1,4 @@
-# -*- coding: undecided -*-
+# -*- coding: utf-8 -*-
 #
 # Cookbook Name:: monitoring
 # Recipe:: default
@@ -20,6 +20,13 @@
 
 package "monit" do
   action :upgrade
+end
+
+
+service "monit" do
+  supports :restart => true, :reload => true
+  reload_command "monit reload"
+  action :nothing
 end
 
 directory "/etc/monit/conf.d" do
@@ -44,12 +51,6 @@ source "monit"
   owner "root"
   group "root"
   notifies :reload, resources(:service => "monit")
-end
-
-service "monit" do
-  supports :restart => true, :reload => true
-  reload_command "monit reload"
-  action :nothing
 end
 
 
