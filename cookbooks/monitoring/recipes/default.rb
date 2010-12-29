@@ -1,8 +1,9 @@
+# -*- coding: undecided -*-
 #
 # Cookbook Name:: monitoring
 # Recipe:: default
 #
-# Copyright 2009, Example Com
+# Copyright 2009, Jacobo García López de Araujo
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,12 +18,8 @@
 # limitations under the License.
 #
 
-packages = %w{ monit }
-
-packages.each do |p|
-  package p do
-    action :install
-  end
+package "monit" do
+  action :upgrade
 end
 
 directory "/etc/monit/conf.d" do
@@ -33,37 +30,38 @@ directory "/etc/monit/conf.d" do
   recursive true
 end
 
-remote_file "/etc/monit/monitrc" do
+cookbook_file "/etc/monit/monitrc" do
   source "monitrc"
   mode "0600"
   owner "root"
   group "root"
+  notifies :restart, resources(:service => "monit")
 end
 
-remote_file "/etc/default/monit" do
+cookbook_file "/etc/default/monit" do
 source "monit"
   mode "0644"
   owner "root"
   group "root"
+  notifies :reload, resources(:service => "monit")
 end
 
 service "monit" do
-  # By default, the init provider is used, which runs /etc/init.d/service_name with _command.
-  supports :restart => true
-  enabled true
-  running true
+  supports :restart => true, :reload => true
+  reload_command "monit reload"
+  action :nothing
 end
 
 
 monit_files = %w{ disk-space email-alerts general }
 
 monit_files.each do |f|
-  remote_file "/etc/monit/conf.d/#{f}.monitrc" do
+  cookbook_file "/etc/monit/conf.d/#{f}.monitrc" do
     source f
     mode "0644"
     owner "root"
     group "root"
-    notifies :restart, resources(:service => "monit")
+    notifies :reload, resources(:service => "monit")
   end
 end
 
