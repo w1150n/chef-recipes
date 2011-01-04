@@ -1,6 +1,8 @@
 
 package "libwww-perl"
-package "munin-node"
+package "munin-node" do
+  action :upgrade
+end
 
 service "munin-node" do
   # By default, the init provider is used, which runs /etc/init.d/service_name with _command.
@@ -27,7 +29,7 @@ end
 extra = %w{ passenger_memory passenger_stats }
 
 extra.each do |p|
-  remote_file "/usr/share/munin/plugins/#{p}" do
+  cookbook_file "/usr/share/munin/plugins/#{p}" do
     source p
     mode "0755"
   end

@@ -1,6 +1,6 @@
 include_recipe "apt"
 
-remote_file "/etc/apt/sources.list.d/brightbox.list" do
+cookbook_file "/etc/apt/sources.list.d/brightbox.list" do
   source "brightbox.list"
   mode 0755
   owner "root"

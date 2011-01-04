@@ -28,14 +28,14 @@ service "denyhosts" do
   action :nothing
 end
 
-remote_file "/usr/local/sbin/unban-ip" do
+cookbook_file "/usr/local/sbin/unban-ip" do
   source "unban-ip"
   mode "0755"
   owner "root"
   group "root"
 end
 
-remote_file "/etc/denyhosts.conf" do
+cookbook_file "/etc/denyhosts.conf" do
   source "denyhosts.conf"
   mode "0644"
   owner "root"

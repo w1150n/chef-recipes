@@ -17,7 +17,7 @@ define :railssite, :site_options => { } do
     not_if "test -d /etc/apache2/sites-conf"
   end
 
-  remote_file "/etc/apache2/sites-conf/#{params[:name]}.conf" do
+  cookbook_file "/etc/apache2/sites-conf/#{params[:name]}.conf" do
     source "#{params[:name]}/#{params[:name]}-includes.conf"
     owner "root"
     group "root"
@@ -38,14 +38,14 @@ define :railssite, :site_options => { } do
       not_if "test -d /etc/apache2/ssl"
     end
 
-    remote_file "/etc/apache2/ssl/server.crt" do
+    cookbook_file "/etc/apache2/ssl/server.crt" do
       source "server.crt"
       owner "root"
       group "root"
       mode "0644"
     end
 
-    remote_file "/etc/apache2/ssl/server.key" do
+    cookbook_file "/etc/apache2/ssl/server.key" do
       source "server.key"
       owner "root"
       group "root"
@@ -53,7 +53,7 @@ define :railssite, :site_options => { } do
     end
 
     if site_options[:certificatechainfile]
-      remote_file "/etc/apache2/ssl/caauthority.crt" do
+      cookbook_file "/etc/apache2/ssl/caauthority.crt" do
         source "caauthority.crt"
         owner "root"
         group "root"

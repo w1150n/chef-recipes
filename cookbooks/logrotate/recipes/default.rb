@@ -22,7 +22,7 @@ package "logrotate" do
 end
 
 node[:logrotate][:services].each do |s|
-  remote_file "/etc/logrotate.d/#{s}" do
+  cookbook_file "/etc/logrotate.d/#{s}" do
     source s
     mode "0644"
     owner "root"

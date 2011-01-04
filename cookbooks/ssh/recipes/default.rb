@@ -1,4 +1,6 @@
-package "openssh-server"
+package "openssh-server" do
+  action :upgrade
+end
 
 service "ssh" do
   supports :reload => true
@@ -7,7 +9,7 @@ service "ssh" do
   service_name "ssh"
 end
 
-remote_file "/etc/ssh/sshd_config" do
+cookbook_file "/etc/ssh/sshd_config" do
   source "sshd_config"
   mode "0644"
   owner "root"
