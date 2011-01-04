@@ -1,62 +1,41 @@
 {
-  "providing": {
-    "ruby": [
-
-    ],
-    "ruby::ruby_deps": [
-
-    ],
-    "ruby::gems": [
-
-    ]
+  "version": "0.3.0",
+  "replacing": {
   },
-  "platforms": {
-    "debian": [
-
-    ],
-    "fedora": [
-
-    ],
-    "centos": [
-
-    ],
-    "ubuntu": [
-
-    ],
-    "redhat": [
-
-    ]
+  "maintainer_email": "ops@example.com",
+  "description": "Installs/Configures ruby",
+  "groupings": {
+  },
+  "recommendations": {
   },
   "attributes": {
-
   },
-  "replacing": {
-
+  "suggestions": {
   },
-  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n",
-  "description": "Installs\/Configures ruby",
-  "version": "0.1.0",
   "dependencies": {
     "apt": [
 
+    ],
+    "restart": [
+
+    ],
+    "rubygems": [
+
     ]
   },
-  "maintainer": "Example Com",
-  "recommendations": {
-
-  },
-  "maintainer_email": "ops@example.com",
-  "suggestions": {
-
+  "long_description": "= DESCRIPTION:\n\nRegular ruby package\n\n= REQUIREMENTS:\n\nDistro with ruby package\n\n= ATTRIBUTES: \n\nNone\n\n= USAGE:\n\nInclude ruby to install regular ruby\n\n= LICENSE & AUTHOR:\n\nAuthor:: Jacobo García López de Araujo (<jacobo.garcia@gmail.com>)\nCopyright:: 2009, Jacobo García López de Araujo.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n",
+  "conflicting": {
   },
   "license": "Apache 2.0",
   "name": "ruby",
-  "recipes": {
-    "ruby::ruby_deps": "",
-    "ruby": "",
-    "ruby::gems": ""
+  "providing": {
   },
-  "conflicting": {
+  "recipes": {
+  },
+  "platforms": {
+    "ubuntu": [
 
-  }
+    ]
+  },
+  "maintainer": "Example Com"
 }

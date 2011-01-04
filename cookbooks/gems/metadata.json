@@ -1,0 +1,35 @@
+{
+  "version": "0.1.0",
+  "replacing": {
+  },
+  "maintainer_email": "ops@example.com",
+  "description": "Installs/Configures gems",
+  "groupings": {
+  },
+  "recommendations": {
+  },
+  "attributes": {
+  },
+  "suggestions": {
+  },
+  "dependencies": {
+    "apt": [
+
+    ],
+    "ree": [
+
+    ]
+  },
+  "long_description": "= DESCRIPTION:\n\nThis recipe install some default gems and it's library dependencies (if needed). \nIt's designed to detect an instalation of Ruby Enterprise and use this path to\ninstall the gems.\n\n= REQUIREMENTS:\n\nThis recipe works in Ubuntu/Debian, requires ruby/ree.\n\n= ATTRIBUTES: \n\nJust the binary path, that the recipe tries to autodetect. \nYou should add the gems and dependencies you want to install. \n\n= USAGE:\n\nInclude the recipe to install gems and dependencies.\n",
+  "conflicting": {
+  },
+  "license": "Apache 2.0",
+  "name": "gems",
+  "providing": {
+  },
+  "recipes": {
+  },
+  "platforms": {
+  },
+  "maintainer": "Example Com"
+}

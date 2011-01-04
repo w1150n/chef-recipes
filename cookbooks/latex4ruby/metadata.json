@@ -1,0 +1,29 @@
+{
+  "version": "0.1.0",
+  "replacing": {
+  },
+  "maintainer_email": "ops@example.com",
+  "description": "Installs/Configures latex4ruby",
+  "groupings": {
+  },
+  "recommendations": {
+  },
+  "attributes": {
+  },
+  "suggestions": {
+  },
+  "dependencies": {
+  },
+  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n",
+  "conflicting": {
+  },
+  "license": "Apache 2.0",
+  "name": "latex4ruby",
+  "providing": {
+  },
+  "recipes": {
+  },
+  "platforms": {
+  },
+  "maintainer": "Example Com"
+}

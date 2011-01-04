@@ -1,9 +1,9 @@
 {
-  "version": "0.1.0",
+  "version": "0.0.0",
   "replacing": {
   },
-  "maintainer_email": "sysadmins@37signals.com",
-  "description": "Configures sudo",
+  "maintainer_email": "youremail@example.com",
+  "description": "A fabulous new cookbook",
   "groupings": {
   },
   "recommendations": {
@@ -13,7 +13,7 @@
   "suggestions": {
   },
   "dependencies": {
-    "apt": [
+    "git": [
 
     ],
     "users": [
@@ -24,12 +24,12 @@
   "conflicting": {
   },
   "license": "Apache v2.0",
-  "name": "sudo",
+  "name": "rvm",
   "providing": {
   },
   "recipes": {
   },
   "platforms": {
   },
-  "maintainer": "37signals"
+  "maintainer": "Your Name"
 }

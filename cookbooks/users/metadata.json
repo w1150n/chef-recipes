@@ -1,21 +1,17 @@
 {
-  "providing": {
-    "users": [
-
-    ]
+  "version": "0.0.0",
+  "replacing": {
   },
-  "platforms": {
-
+  "maintainer_email": "youremail@example.com",
+  "description": "A fabulous new cookbook",
+  "groupings": {
+  },
+  "recommendations": {
   },
   "attributes": {
-
   },
-  "replacing": {
-
+  "suggestions": {
   },
-  "long_description": "",
-  "description": "A fabulous new cookbook",
-  "version": "0.0.0",
   "dependencies": {
     "sudo": [
 
@@ -24,20 +20,16 @@
 
     ]
   },
-  "maintainer": "Your Name",
-  "recommendations": {
-
-  },
-  "maintainer_email": "youremail@example.com",
-  "suggestions": {
-
+  "long_description": "",
+  "conflicting": {
   },
   "license": "Apache v2.0",
   "name": "users",
-  "recipes": {
-    "users": ""
+  "providing": {
   },
-  "conflicting": {
-
-  }
+  "recipes": {
+  },
+  "platforms": {
+  },
+  "maintainer": "Your Name"
 }

@@ -1,0 +1,32 @@
+{
+  "version": "0.1.0",
+  "replacing": {
+  },
+  "maintainer_email": "jacobo.garcia@gmail.com",
+  "description": "Installs/Configures railssites",
+  "groupings": {
+  },
+  "recommendations": {
+  },
+  "attributes": {
+  },
+  "suggestions": {
+  },
+  "dependencies": {
+    "cron": [
+
+    ]
+  },
+  "long_description": "= DESCRIPTION:\n\nRecipe that installs rails applications. It creates a shell user for each app. \n\n= REQUIREMENTS:\n\nIt uses apache2 definition to create virtualhosts. \nIt's necessary to add the application's shell users via Users recipe.\n\n= ATTRIBUTES: \n\nYou can define several rails applications in the file attributes/default.rb. \nEach application is part of the Mash [:railssites] with the following attributes:\n     * server_name: virtualhost for the app.\n     * user: desired shell user.\n     * dbname: database name.\n     * dbuser: database user.\n     * dbpass: database password.\n     * dbhost: database host. This four attributes are used to create database.yml\n     * includes: set true to indicate that there is a  file with some apache custom code such us rewrite rules.\n     * ssl: set to true if you want ssl support\n     * certificatechainfile: set to true if your ssl config needs a certificate chain file\n     * config_files: an array of additional configuration files for the app.\n= USAGE:\n\nInclude the recipe to install as many rails applications as are configured \nin the attributes. The recipe has support for ssl sites, crontabs, creating \ndatabase.yml files and adding custom files to shared rails application dir.\n\nIf you want ssl support, besides adding setting ssl certificate to true you have to \nadd the .key and .crt files as server.key and server.cert in files/default/\nIf you also need certificate chain file support set the attribute to true and\nadd the .crt file to files/default/ as caauthority.crt\n\n== Defines: \n\n* railssite: that creates all the infraestructure behind a rails app.\n\n== Crontabs: \n\n* There's also another recipe that can be used to install crontabs, you have \nto add the crontab as a File resource with the following sintaxis appname.crontab\n\n== Includes\n\n* When setting include attribute to true and adding a file with the syntax appname-includes.conf the recipe copies this file to a directory and include the file in the virtualhost.\n\n= LICENSE & AUTHOR:\n\nAuthor:: Jacobo García López de Araujo (<jacobo.garcia@gmail.com>)\nCopyright:: 2009, Jacobo García López de Araujo.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n",
+  "conflicting": {
+  },
+  "license": "Apache 2.0",
+  "name": "railssites",
+  "providing": {
+  },
+  "recipes": {
+  },
+  "platforms": {
+  },
+  "maintainer": "Jacobo García"
+}

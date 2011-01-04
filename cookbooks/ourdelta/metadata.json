@@ -2,8 +2,8 @@
   "version": "0.1.0",
   "replacing": {
   },
-  "maintainer_email": "sysadmins@37signals.com",
-  "description": "Configures sudo",
+  "maintainer_email": "jacobo.garcia@gmail.com",
+  "description": "Installs/Configures ourdelta",
   "groupings": {
   },
   "recommendations": {
@@ -15,21 +15,18 @@
   "dependencies": {
     "apt": [
 
-    ],
-    "users": [
-
     ]
   },
-  "long_description": "",
+  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n",
   "conflicting": {
   },
-  "license": "Apache v2.0",
-  "name": "sudo",
+  "license": "Apache 2.0",
+  "name": "ourdelta",
   "providing": {
   },
   "recipes": {
   },
   "platforms": {
   },
-  "maintainer": "37signals"
+  "maintainer": "Jacobo García"
 }

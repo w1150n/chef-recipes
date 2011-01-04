@@ -1,38 +1,29 @@
 {
-  "providing": {
-    "monitoring": [
-
-    ]
-  },
-  "platforms": {
-
-  },
-  "attributes": {
-
-  },
-  "replacing": {
-
-  },
-  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n",
-  "description": "Installs\/Configures monitoring",
   "version": "0.1.0",
-  "dependencies": {
-
-  },
-  "maintainer": "Example Com",
-  "recommendations": {
-
+  "replacing": {
   },
   "maintainer_email": "ops@example.com",
+  "description": "Installs/Configures monitoring",
+  "groupings": {
+  },
+  "recommendations": {
+  },
+  "attributes": {
+  },
   "suggestions": {
-
+  },
+  "dependencies": {
+  },
+  "long_description": "= DESCRIPTION:\n\nRecipe that installs and configures some monitoring services, actually monit and munin. \nIt configures both munin-nodes and munin master.\n\n= REQUIREMENTS:\n\nNo special requirements.\n\n= ATTRIBUTES: \n\nFor munin: \n\n* muninmaster address so we can create munin nodes configuration \n\n= USAGE:\n\nInclude monitoring recipe to add monit support with some default configurations:\n* disk-space \n* notification settings\n* apache2\n\nInclude munin recipe to add munin support with some extra plugins:\n\n* passenger memory stats\n* passenger stats\n\nMunin recipe also enables some interesting but not enabled by default\nplugins, it also disables some plugins that I think are not useful at all.\n",
+  "conflicting": {
   },
   "license": "Apache 2.0",
   "name": "monitoring",
-  "recipes": {
-    "monitoring": ""
+  "providing": {
   },
-  "conflicting": {
-
-  }
+  "recipes": {
+  },
+  "platforms": {
+  },
+  "maintainer": "Example Com"
 }
