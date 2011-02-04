@@ -18,6 +18,9 @@
     ],
     "ssh_keys": [
 
+    ],
+    "ruby-shadow-1.9.2": [
+
     ]
   },
   "long_description": "",

@@ -1,0 +1,29 @@
+{
+  "version": "0.0.1",
+  "replacing": {
+  },
+  "maintainer_email": "admin@webpop.com",
+  "description": "Installs and configures all aspects of apache2 using Debian style symlinks with helper definitions",
+  "groupings": {
+  },
+  "recommendations": {
+  },
+  "attributes": {
+  },
+  "suggestions": {
+  },
+  "dependencies": {
+  },
+  "long_description": "= DESCRIPTION:\n\nRecipe for compiling and installing a ruby-1.9.2 compatible version of ruby-shadow.\n\nThis is a pretty quick fix for getting ruby-shadow compatible with the ruby 1.9 C extension API. It will not work with ruby 1.8.\n\nBased on the 37 Signals ruby-shadow cookbook.",
+  "conflicting": {
+  },
+  "license": "Apache 2.0",
+  "name": "ruby-shadow-1.9.2",
+  "providing": {
+  },
+  "recipes": {
+  },
+  "platforms": {
+  },
+  "maintainer": "Webpop"
+}
