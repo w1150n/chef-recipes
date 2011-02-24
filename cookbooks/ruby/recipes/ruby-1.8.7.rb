@@ -1,8 +1,9 @@
+# -*- coding: utf-8 -*-
 #
 # Cookbook Name:: ruby
-# Recipe:: default
+# Recipe:: ruby-1.8.7
 #
-# Copyright 2009, Example Com
+# Copyright 2009, Jacobo García López de Araujo.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,14 +18,33 @@
 # limitations under the License.
 #
 
+# We need to remove ruby enterprise repository
+# if previously exists in order to install regular ruby
 
-execute "apt-get update"
+include_recipe "chef::client"
 
-packages = %w(ruby ruby1.8-dev libxml-ruby)
+reboot_chef = false
+
+if RUBY_DESCRIPTION=~/(.*) Ruby Enterprise Edition/
+
+  reboot_chef = true
+  remove_repository "brightbox-rubyee.list"
+  add_apt_preferences "ruby1.8" do
+    packages %w(libopenssl-ruby1.8 libreadline-ruby1.8 libruby1.8 ruby1.8 ruby1.8-dev)
+    pin "release l=Ubuntu"
+    pin_priority "600"
+  end
+end
+
+packages = %w(libopenssl-ruby1.8 libreadline-ruby1.8 libruby1.8 ruby1.8 ruby1.8-dev)
+
+#packages = %w(ruby ruby-dev libopenssl-ruby libreadline-ruby librmagick-ruby librmagick-ruby1.8 ruby1.8 ruby1.8-dev libopenssl-ruby1.8 librmagick-ruby1.8 libruby1.8 libreadline-ruby1.8)
 
 packages.each do |p|
   package p do
     action :upgrade
+    options "--force-yes"
+    notifies :restart, resources(:service => "chef-client") if reboot_chef
   end
 end
 

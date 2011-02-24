@@ -2,7 +2,7 @@
   "version": "0.3.0",
   "replacing": {
   },
-  "maintainer_email": "ops@example.com",
+  "maintainer_email": "jacobo.garcia@gmail.com",
   "description": "Installs/Configures ruby",
   "groupings": {
   },
@@ -16,10 +16,10 @@
     "apt": [
 
     ],
-    "restart": [
+    "chef": [
 
     ],
-    "rubygems": [
+    "restart": [
 
     ]
   },
@@ -37,5 +37,5 @@
 
     ]
   },
-  "maintainer": "Example Com"
+  "maintainer": "Jacobo García"
 }
