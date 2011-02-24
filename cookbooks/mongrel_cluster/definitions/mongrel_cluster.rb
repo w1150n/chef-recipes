@@ -38,7 +38,8 @@ define :mongrel_cluster do
               :path => params[:path] ,
               :port => params[:port],
               :name => params[:name],
-              :mongrel_start_timeout => params[:mongrel_start_timeout]
+              :mongrel_start_timeout => params[:mongrel_start_timeout],
+              :memory_limit => params[:memory_limit]
               )
     notifies :restart, resources(:service => "monit")
   end
