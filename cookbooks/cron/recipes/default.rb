@@ -22,7 +22,7 @@ package "cron" do
   action :upgrade
 end
 
-service "cron" do
+cron_service = service "cron" do
   action :nothing
   supports :reload => true
 end
