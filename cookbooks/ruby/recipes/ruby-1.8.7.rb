@@ -20,11 +20,10 @@
 
 execute "apt-get update"
 
-packages = %w{ ruby ruby1.8-dev libxml-ruby }
+packages = %w(ruby ruby1.8-dev libxml-ruby)
 
 packages.each do |p|
   package p do
-    action :install
     action :upgrade
   end
 end

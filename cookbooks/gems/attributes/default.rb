@@ -14,5 +14,5 @@ when "10.04"
 end
 
 set[:gems][:dependencies]=%w(libxslt1-dev libxml2 libxml2-dev imagemagick libfreeimage-dev) + dependencies
-set[:gems][:packages]=%w(mysql newrelic_rpm bundler)
+set[:gems][:packages]=%w(mysql newrelic_rpm bundler rake)
 
