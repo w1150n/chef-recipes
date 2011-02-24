@@ -17,9 +17,17 @@
 # limitations under the License.
 #
 
-execute "apt-get update" do
+apt_get_update = execute "apt-get update" do
   action :nothing
 end
 
+package "python-software-properties" do
+  action :upgrade
+end
 
-
+template "/etc/apt/preferences" do
+  source "preferences.erb"
+  mode "0644"
+  cookbook "apt"
+  notifies :run, resources(:execute => "apt-get update"), :immediately
+end
