@@ -12,9 +12,9 @@ define :app_user, :site_options => { } do
     comment "#{site_options[:user]} application user"
     home "/home/#{site_options[:user]}"
     shell "/bin/bash"
-    password site_options[:password]
     supports :manage_home => true
-    action :create
+    password ""
+    action [:create,:manage]
     gid site_options[:user]
   end
 
