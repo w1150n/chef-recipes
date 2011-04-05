@@ -1,4 +1,4 @@
-include_recipe 'monitoring'
+include_recipe 'monit::default'
 
 template "/etc/monit/conf.d/memcached.monitrc" do
   source "memcached.erb"

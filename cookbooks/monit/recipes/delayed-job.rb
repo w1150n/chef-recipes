@@ -1,4 +1,4 @@
-include_recipe 'monitoring'
+include_recipe 'monit::default'
 
 node[:monit][:delayed_job].each do |app,jobs|
   jobs.each do |job|

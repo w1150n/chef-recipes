@@ -1,4 +1,4 @@
-include_recipe 'monitoring'
+include_recipe 'monit::default'
 
 node[:monit][:ultrasphinx].each do |appname|
   template "/etc/monit/conf.d/sphinx-#{appname}.monitrc" do

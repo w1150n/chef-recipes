@@ -1,6 +1,12 @@
+package "libwww-perl" do
+  action :upgrade
+end
 
-package "libwww-perl"
 package "munin-node" do
+  action :upgrade
+end
+
+package "munin-plugins-extra" do
   action :upgrade
 end
 
@@ -42,8 +48,38 @@ extra.each do |p|
   end
 end
 
+# Special config for memcached plugins
+
+file "/et/munin/plugins/memcached" do
+  action :delete
+end
+
+file "/usr/share/munin/plugins/memcached_" do
+  action :delete
+end
+
+file "/etc/munin/plugins/memcached" do
+  action :delete
+end
+
+cookbook_file "/usr/share/munin/plugins/memcached_multi_" do
+  source "memcached_multi_"
+  mode "0755"
+end
+
+memcached_options = %w(bytes commands conns evictions items memory)
+memcached_options.each do |p|
+
+  link "/etc/munin/plugins/memcached_multi_#{p}" do
+    to "/usr/share/munin/plugins/memcached_multi_"
+    link_type :symbolic
+#    not_if "test -h /etc/munin/plugins/memcached_multi_#{p}"
+    notifies :restart, resources(:service => "munin-node")
+  end
+end
 
 plugins = %w{ apache_accesses apache_processes apache_volume cpu df df_inode entropy forks if_err_eth0 if_err_eth1 if_eth0 if_eth1 interrupts iostat load memory mysql_queries netstat open_files open_inodes passenger_memory passenger_stats postfix_mailqueue postfix_mailvolume processes swap uptime vmstat }
+
 uninstall = %w{ exim_mailqueue exim_mailstats irqstats ntp_europium_canonical_com }
 
 plugins.each do |p|

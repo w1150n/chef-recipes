@@ -1,4 +1,4 @@
-include_recipe 'monitoring'
+include_recipe 'monit::default'
 
 template "/etc/monit/conf.d/apache.monitrc" do
   source "apache2.erb"

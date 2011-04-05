@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Cookbook Name:: monitoring
+# Cookbook Name:: monit
 # Recipe:: default
 #
 # Copyright 2009, Jacobo García López de Araujo

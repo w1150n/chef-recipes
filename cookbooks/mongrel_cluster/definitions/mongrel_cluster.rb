@@ -25,7 +25,7 @@ define :mongrel_cluster do
     notifies :restart, resources(:service =>"mongrel_cluster_#{params[:name]}")
   end
 
-  include_recipe "monitoring"
+  include_recipe "monit::default"
 
   template "/etc/monit/conf.d/mongrel-cluster-#{params[:name]}.monitrc" do
     mode "0644"
