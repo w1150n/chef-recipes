@@ -28,6 +28,7 @@
   RewriteLog <%= @node[:apache][:log_dir] %>/<%= @application_name %>-rewrite.log
   RewriteLogLevel 0
 
+  ErrorDocument 503 /system/maintenance.html  
   RewriteCond %{DOCUMENT_ROOT}/system/maintenance.html -f
   RewriteCond %{SCRIPT_FILENAME} !maintenance.html
   RewriteCond %{SCRIPT_FILENAME} !^(.+).(gif|jpg|css)$
