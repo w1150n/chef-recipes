@@ -223,7 +223,7 @@ LogFormat "%{User-agent}i" agent
 
 
 # New relic queue support
-RequestHeader set X-Request-Start "%t"
+RequestHeader set X-QUEUE-START "%t"
 
 # User modified time + size only, no inode
 FileEtag MTime Size
