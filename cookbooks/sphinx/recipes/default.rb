@@ -28,8 +28,6 @@ directory node[:sphinx][:src_path] do
   owner "root"
   group "root"
   mode "0755"
-  action :create
-  not_if do File.exists?(node[:sphinx][:path]) end
 end
 
 remote_file node[:sphinx][:tar_file] do
@@ -48,7 +46,7 @@ script "install_sphinx" do
   interpreter "bash"
   user "root"
   cwd node[:sphinx][:src_path]
-  not_if "test -f /usr/local/bin/searchd"
+  not_if  "test -f /usr/local/bin/searchd"
   code <<-EOH
     tar -xvf #{node[:sphinx][:tar_file]}
     cd  #{node[:sphinx][:version]}
