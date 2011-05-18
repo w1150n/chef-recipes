@@ -1,16 +1,17 @@
 {
-  "version": "0.1.0",
-  "replacing": {
-  },
-  "maintainer_email": "ops@example.com",
+  "name": "ree",
   "description": "Installs/Configures ree",
-  "groupings": {
-  },
-  "recommendations": {
-  },
-  "attributes": {
-  },
-  "suggestions": {
+  "long_description": "= DESCRIPTION:\n\nCustom install of ruby enterprise edition\n\n= REQUIREMENTS:\n\nRegular ruby in case that we are compiling from source. \n\n= ATTRIBUTES: \n\nThe file attributes/default.rb contains the following atribute types:\n\n* ruby enterprise version to install\n* ruby enterprise source path\n* ruby enterprise destination path\n* ruby enterprise compile options\n\n= USAGE:\n\nInclude ree recipe to install a compiled version of Ruby Enterprise. \nAlso if you are using ubuntu 8.04 on a 32 bit userspace machine the recipe installs \nRuby Enterprise from Brightbox public repository.\n\n= LICENSE & AUTHOR:\n\nAuthor:: Jacobo García López de Araujo (<jacobo.garcia@gmail.com>)\nCopyright:: 2009, Jacobo García López de Araujo.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n",
+  "maintainer": "Example Com",
+  "maintainer_email": "ops@example.com",
+  "license": "Apache 2.0",
+  "platforms": {
+    "ubuntu": [
+
+    ],
+    "debian": [
+
+    ]
   },
   "dependencies": {
     "apt": [
@@ -20,22 +21,21 @@
 
     ]
   },
-  "long_description": "= DESCRIPTION:\n\nCustom install of ruby enterprise edition\n\n= REQUIREMENTS:\n\nRegular ruby in case that we are compiling from source. \n\n= ATTRIBUTES: \n\nThe file attributes/default.rb contains the following atribute types:\n\n* ruby enterprise version to install\n* ruby enterprise source path\n* ruby enterprise destination path\n* ruby enterprise compile options\n\n= USAGE:\n\nInclude ree recipe to install a compiled version of Ruby Enterprise. \nAlso if you are using ubuntu 8.04 on a 32 bit userspace machine the recipe installs \nRuby Enterprise from Brightbox public repository.\n\n= LICENSE & AUTHOR:\n\nAuthor:: Jacobo García López de Araujo (<jacobo.garcia@gmail.com>)\nCopyright:: 2009, Jacobo García López de Araujo.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n",
+  "recommendations": {
+  },
+  "suggestions": {
+  },
   "conflicting": {
   },
-  "license": "Apache 2.0",
-  "name": "ree",
   "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
   },
   "recipes": {
   },
-  "platforms": {
-    "debian": [
-
-    ],
-    "ubuntu": [
-
-    ]
-  },
-  "maintainer": "Example Com"
+  "version": "0.1.0"
 }
