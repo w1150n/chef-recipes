@@ -28,6 +28,7 @@ def db_backup(config)
   local_backup_path=config['local_backup_path']
   mysql_user=config['mysql_user']
   mysql_pass=config['mysql_pass']
+  mysql_host=config['mysql_host']
   date = Time.now.strftime("%j-%d-%b-%Y").to_s
   latest="latest.gz"
 
@@ -39,7 +40,7 @@ def db_backup(config)
           dbdumps_dir=dumps_dir + "/#{db}"
           make_dir(dbdumps_dir,project)
           Dir.chdir(dbdumps_dir)
-          mysql_command="mysqldump -u #{mysql_user} -p#{mysql_pass} #{db} | gzip > #{latest}"
+          mysql_command="mysqldump -u #{mysql_user} -h #{mysql_host} -p#{mysql_pass} #{db} | gzip > #{latest}"
           mysql_result=`#{mysql_command}`
           puts mysql_result
           FileUtils.chown(project,project,latest)  if Etc.getpwnam(user) rescue nil
