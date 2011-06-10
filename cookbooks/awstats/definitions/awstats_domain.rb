@@ -21,7 +21,7 @@ define :awstats_domain, :logtype => "W", :logformat => "4" do
 
   cron "awstats #{params[:name]}" do
     minute "*/10"
-    command "/usr/lib/cgi-bin/awstats.pl -config=#{params[:name]} -update"
+    command "/usr/lib/cgi-bin/awstats.pl -config=#{params[:name]} -update > /dev/null"
     user "root"
     mailto "notificacion.sistemas@aspgems.com"
   end
