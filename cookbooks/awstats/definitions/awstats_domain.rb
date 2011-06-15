@@ -3,7 +3,7 @@ define :awstats_domain, :logtype => "W", :logformat => "4" do
 
   include_recipe "awstats::default"
 
-  aliases = (params[:aliases] | ["localhost", "127.0.0.1" ]).join
+  aliases = (params[:aliases] | ["localhost", "127.0.0.1" ]).join(" ")
 
   template "/etc/awstats/awstats.#{params[:name]}.conf" do
     source "awstats.conf.erb"
