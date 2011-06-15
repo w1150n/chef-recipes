@@ -14,7 +14,7 @@ define :app_user, :site_options => { } do
     shell "/bin/bash"
     supports :manage_home => true
     password ""
-    action [:create,:manage]
+    action [  :create, :modify, :manage ]
     gid site_options[:user]
   end
 
