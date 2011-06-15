@@ -1,38 +1,38 @@
 {
-  "version": "0.1.0",
-  "replacing": {
-  },
-  "maintainer_email": "jacobo.garcia@gmai.com",
+  "name": "passenger",
   "description": "Installs/Configures differnt passenger flavours",
-  "groupings": {
-  },
-  "recommendations": {
-  },
-  "attributes": {
-  },
-  "suggestions": {
+  "long_description": "= DESCRIPTION:\n\nPassenger cookbook, provides several method of installing and configuring passenger.\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n\n",
+  "maintainer": "Jacobo García López de Araujo",
+  "maintainer_email": "jacobo.garcia@gmai.com",
+  "license": "Apache 2.0",
+  "platforms": {
   },
   "dependencies": {
     "apt": [
 
     ],
-    "ree": [
+    "apache2": [
 
     ],
-    "apache2": [
+    "ree": [
 
     ]
   },
-  "long_description": "= DESCRIPTION:\n\nPassenger cookbook, provides several method of installing and configuring passenger.\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n\n",
+  "recommendations": {
+  },
+  "suggestions": {
+  },
   "conflicting": {
   },
-  "license": "Apache 2.0",
-  "name": "passenger",
   "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
   },
   "recipes": {
   },
-  "platforms": {
-  },
-  "maintainer": "Jacobo García López de Araujo"
+  "version": "0.1.0"
 }

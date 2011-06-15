@@ -1,29 +1,29 @@
 {
-  "version": "0.1.0",
-  "replacing": {
-  },
-  "maintainer_email": "ops@example.com",
+  "name": "logrotate",
   "description": "Installs/Configures logrotate",
-  "groupings": {
-  },
-  "recommendations": {
-  },
-  "attributes": {
-  },
-  "suggestions": {
+  "long_description": "= DESCRIPTION:\n\nLogrotate file\n\n= REQUIREMENTS:\n\nNothing special\n\n= ATTRIBUTES: \n\n:services is an array of services that are included in the rotation.\n\n= USAGE:\n\nJust set the services you want to be rotated in the attributes and add a file containing the logrotate config for each service in files/\n",
+  "maintainer": "Example Com",
+  "maintainer_email": "ops@example.com",
+  "license": "Apache 2.0",
+  "platforms": {
   },
   "dependencies": {
   },
-  "long_description": "= DESCRIPTION:\n\nLogrotate file\n\n= REQUIREMENTS:\n\nNothing special\n\n= ATTRIBUTES: \n\n:services is an array of services that are included in the rotation.\n\n= USAGE:\n\nJust set the services you want to be rotated in the attributes and add a file containing the logrotate config for each service in files/\n",
+  "recommendations": {
+  },
+  "suggestions": {
+  },
   "conflicting": {
   },
-  "license": "Apache 2.0",
-  "name": "logrotate",
   "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
   },
   "recipes": {
   },
-  "platforms": {
-  },
-  "maintainer": "Example Com"
+  "version": "0.1.0"
 }

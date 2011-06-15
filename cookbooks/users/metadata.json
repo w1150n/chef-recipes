@@ -1,38 +1,38 @@
 {
-  "version": "0.0.0",
-  "replacing": {
-  },
-  "maintainer_email": "youremail@example.com",
+  "name": "users",
   "description": "A fabulous new cookbook",
-  "groupings": {
-  },
-  "recommendations": {
-  },
-  "attributes": {
-  },
-  "suggestions": {
+  "long_description": "",
+  "maintainer": "Your Name",
+  "maintainer_email": "youremail@example.com",
+  "license": "Apache v2.0",
+  "platforms": {
   },
   "dependencies": {
-    "sudo": [
+    "ssh_keys": [
 
     ],
-    "ssh_keys": [
+    "sudo": [
 
     ],
     "ruby-shadow-1.9.2": [
 
     ]
   },
-  "long_description": "",
+  "recommendations": {
+  },
+  "suggestions": {
+  },
   "conflicting": {
   },
-  "license": "Apache v2.0",
-  "name": "users",
   "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
   },
   "recipes": {
   },
-  "platforms": {
-  },
-  "maintainer": "Your Name"
+  "version": "0.0.0"
 }

@@ -1,35 +1,35 @@
 {
-  "version": "0.1.0",
-  "replacing": {
-  },
-  "maintainer_email": "sysadmins@37signals.com",
+  "name": "sudo",
   "description": "Configures sudo",
-  "groupings": {
-  },
-  "recommendations": {
-  },
-  "attributes": {
-  },
-  "suggestions": {
+  "long_description": "",
+  "maintainer": "37signals",
+  "maintainer_email": "sysadmins@37signals.com",
+  "license": "Apache v2.0",
+  "platforms": {
   },
   "dependencies": {
-    "apt": [
+    "users": [
 
     ],
-    "users": [
+    "apt": [
 
     ]
   },
-  "long_description": "",
+  "recommendations": {
+  },
+  "suggestions": {
+  },
   "conflicting": {
   },
-  "license": "Apache v2.0",
-  "name": "sudo",
   "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
   },
   "recipes": {
   },
-  "platforms": {
-  },
-  "maintainer": "37signals"
+  "version": "0.1.0"
 }

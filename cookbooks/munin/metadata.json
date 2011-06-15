@@ -1,29 +1,29 @@
 {
-  "version": "0.1.0",
-  "replacing": {
-  },
-  "maintainer_email": "jacobo.garcia@gmail.com",
+  "name": "munin",
   "description": "Installs/Configures munin server and client",
-  "groupings": {
-  },
-  "recommendations": {
-  },
-  "attributes": {
-  },
-  "suggestions": {
+  "long_description": "= DESCRIPTION:\n\nRecipe that installs and configures munin. Includes recipes for configuring munin-server and munin-nodes.\n\n= REQUIREMENTS:\n\nUbuntu 8.04 / Ubuntu 10.04\n\n= ATTRIBUTES: \n\nFor munin: \n\n* muninmaster address so the clients know where to report.\n\n= USAGE:\n\nInclude munin recipe to add munin support with some extra plugins:\n\n* passenger memory stats\n* passenger stats\n* memcached\n\nMunin recipe also enables some interesting plugins not enabled by default, it also disables some plugins that I think are not useful at all.\n",
+  "maintainer": "Jacobo García López de Araujo",
+  "maintainer_email": "jacobo.garcia@gmail.com",
+  "license": "Apache 2.0",
+  "platforms": {
   },
   "dependencies": {
   },
-  "long_description": "= DESCRIPTION:\n\nRecipe that installs and configures munin. Includes recipes for configuring munin-server and munin-nodes.\n\n= REQUIREMENTS:\n\nUbuntu 8.04 / Ubuntu 10.04\n\n= ATTRIBUTES: \n\nFor munin: \n\n* muninmaster address so the clients know where to report.\n\n= USAGE:\n\nInclude munin recipe to add munin support with some extra plugins:\n\n* passenger memory stats\n* passenger stats\n* memcached\n\nMunin recipe also enables some interesting plugins not enabled by default, it also disables some plugins that I think are not useful at all.\n",
+  "recommendations": {
+  },
+  "suggestions": {
+  },
   "conflicting": {
   },
-  "license": "Apache 2.0",
-  "name": "munin",
   "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
   },
   "recipes": {
   },
-  "platforms": {
-  },
-  "maintainer": "Jacobo García López de Araujo"
+  "version": "0.1.0"
 }

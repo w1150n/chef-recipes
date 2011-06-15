@@ -1,29 +1,29 @@
 {
-  "version": "0.1.0",
-  "replacing": {
-  },
-  "maintainer_email": "ops@example.com",
+  "name": "latex4ruby",
   "description": "Installs/Configures latex4ruby",
-  "groupings": {
-  },
-  "recommendations": {
-  },
-  "attributes": {
-  },
-  "suggestions": {
+  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n",
+  "maintainer": "Example Com",
+  "maintainer_email": "ops@example.com",
+  "license": "Apache 2.0",
+  "platforms": {
   },
   "dependencies": {
   },
-  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n",
+  "recommendations": {
+  },
+  "suggestions": {
+  },
   "conflicting": {
   },
-  "license": "Apache 2.0",
-  "name": "latex4ruby",
   "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
   },
   "recipes": {
   },
-  "platforms": {
-  },
-  "maintainer": "Example Com"
+  "version": "0.1.0"
 }

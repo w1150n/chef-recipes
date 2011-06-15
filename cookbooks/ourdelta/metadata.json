@@ -1,32 +1,32 @@
 {
-  "version": "0.1.0",
-  "replacing": {
-  },
-  "maintainer_email": "jacobo.garcia@gmail.com",
+  "name": "ourdelta",
   "description": "Installs/Configures ourdelta",
-  "groupings": {
-  },
-  "recommendations": {
-  },
-  "attributes": {
-  },
-  "suggestions": {
+  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n",
+  "maintainer": "Jacobo García",
+  "maintainer_email": "jacobo.garcia@gmail.com",
+  "license": "Apache 2.0",
+  "platforms": {
   },
   "dependencies": {
     "apt": [
 
     ]
   },
-  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n",
+  "recommendations": {
+  },
+  "suggestions": {
+  },
   "conflicting": {
   },
-  "license": "Apache 2.0",
-  "name": "ourdelta",
   "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
   },
   "recipes": {
   },
-  "platforms": {
-  },
-  "maintainer": "Jacobo García"
+  "version": "0.1.0"
 }
