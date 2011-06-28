@@ -10,7 +10,7 @@ case platform_version
 when "8.04"
   dependencies=%w(libmagick9-dev libmysqlclient15-dev)
 when "10.04"
-  dependencies=%w(libmagickcore-dev libmysqlclient-dev)
+  dependencies=%w(libmagickcore-dev libmysqlclient-dev libmagickwand-dev libmagickcore2 libmagickcore2-extra libmagickwand2)
 end
 
 set[:gems][:dependencies]=%w(libxslt1-dev libxml2 libxml2-dev imagemagick libfreeimage-dev) + dependencies
