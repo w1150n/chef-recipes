@@ -1,38 +1,41 @@
-define :app_user, :site_options => { } do
-
-  site_options=params[:site_options]
+define :app_user do
 
   package "libshadow-ruby1.8" do
     action :install
   end
 
-  group site_options[:user]
+  group params[:name]
 
-  user site_options[:user] do
-    comment "#{site_options[:user]} application user"
-    home "/home/#{site_options[:user]}"
+  user params[:name] do
+    comment "#{params[:name]} application user"
+    home "/home/#{params[:name]}"
     shell "/bin/bash"
     supports :manage_home => true
     password ""
     action [  :create, :modify, :manage ]
-    gid site_options[:user]
+    gid params[:name]
   end
 
   group "adm" do
-    members site_options[:user]
+    members params[:name]
     append true
   end
 
-  directory "/home/#{site_options[:user]}/.ssh" do
+  directory "/home/#{params[:name]}" do
     action :create
-    owner site_options[:user]
-    group site_options[:user]
+    owner params[:name]
+    group params[:name]
+    mode "0755"
+  end
+
+  directory "/home/#{params[:name]}/.ssh" do
+    action :create
+    owner params[:name]
+    group params[:name]
     mode 0700
   end
 
-  options={ :group => site_options[:user] }
-
-  add_keys site_options[:user] do
-    conf options
+  add_keys params[:name] do
+    group params[:name]
   end
 end

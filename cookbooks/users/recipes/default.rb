@@ -18,7 +18,7 @@ node[:users].each do |u, config|
     action :create
   end
 
-  if config[:group].eql?(:admin)
+  if config[:group] == "admin"
     group "admin" do
       members [ u ]
       action :create
@@ -34,9 +34,9 @@ node[:users].each do |u, config|
   end
 
   add_keys u do
-    conf config
+    group config[:group]
   end
 
 end
 
-require_recipe "sudo"
+include_recipe "sudo"
