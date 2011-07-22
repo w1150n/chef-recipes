@@ -1,0 +1,34 @@
+<VirtualHost *:80>
+  ServerName <%= @params[:server_name] %>
+  ServerAlias <% @params[:server_aliases].each do |a| %><%= "#{a}" %> <% end %>
+  DocumentRoot <%= @params[:docroot] %>
+
+  <Directory <%= @params[:docroot] %>>
+    Options FollowSymLinks
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  <Proxy balancer://trinidad >
+   BalancerMember ajp://127.0.0.1:<%= @node[:trinidad][:ajp_port] %>
+   Allow from 127.0.0.1
+  </Proxy>
+
+  RewriteEngine On
+  RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_FILENAME} !-f
+  RewriteRule ^/(.*)$ balancer://trinidad%{REQUEST_URI} [P,QSA,L]
+
+  RewriteLog <%= @node[:apache][:log_dir] %>/<%= @application_name %>-rewrite.log
+  RewriteLogLevel 0
+
+  ErrorDocument 503 /system/maintenance.html
+  RewriteCond %{DOCUMENT_ROOT}/system/maintenance.html -f
+  RewriteCond %{SCRIPT_FILENAME} !maintenance.html
+  RewriteCond %{SCRIPT_FILENAME} !^(.+).(gif|jpg|css)$
+  RewriteRule ^.*$ /system/maintenance.html [R=503,L]  
+
+  LogLevel info
+  ErrorLog <%= @node[:apache][:log_dir] %>/<%= @params[:name] %>-error.log
+  CustomLog <%= @node[:apache][:log_dir] %>/<%= @params[:name] %>-access.log combined
+</VirtualHost>
