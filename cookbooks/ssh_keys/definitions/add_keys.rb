@@ -1,11 +1,9 @@
 define :add_keys do
 
-  config = params[:conf]
-  name = params[:name]
   keys = Hash.new
 
-  if config[:group].to_s.eql?("admin")
-    keys[name] = node[:ssh_keys][name]
+  if params[:group].to_s.eql?("admin")
+    keys[params[:name]] = node[:ssh_keys][params[:name]]
   else
     users=data_bag('keys_catalog')
     users_keys=Array.new
@@ -17,20 +15,18 @@ define :add_keys do
       end
     end
 
-    users_keys << node[:ssh_keys][name] unless node[:ssh_keys].nil?
-    keys[name] = users_keys
-
-    keys[name].flatten!
-    keys[name].uniq!
-    keys[name]
+    keys[params[:name]] = users_keys
+    keys[params[:name]].flatten!
+    keys[params[:name]].uniq!
+    keys[params[:name]]
   end
 
-  template "/home/#{name}/.ssh/authorized_keys" do
+  template "/home/#{params[:name]}/.ssh/authorized_keys" do
     source "authorized_keys.erb"
     action :create
     cookbook "ssh_keys"
-    owner name
-    group (config[:group]).to_s
+    owner params[:name]
+    group params[:group]
     variables(:keys => keys)
     mode 0600
   end
