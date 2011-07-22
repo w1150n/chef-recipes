@@ -1,0 +1,19 @@
+---
+  port: <%= @node[:trinidad][:port] %>
+  ajp:      
+    port: <%= @node[:trinidad][:ajp_port] %>
+  environment: production                           
+  jruby_min_runtimes: <%= @node[:trinidad][:min_runtimes] %>
+  jruby_max_runtimes: <%= @node[:trinidad][:max_runtimes] %> 
+  log: INFO
+#  extensions:
+#    daemon:
+#      pid_file: /var/run/trinidad/trinidad.pid
+  web_apps:
+  <% @node[:trinidad][:apps].keys.each do |name| %>
+     <%= name %>:
+       web_app_dir: <%= "#{@node[:trinidad][:applications_home]}/#{name}/app/current" %>
+     <% if @node[:trinidad][:apps][name][:context]  %>
+       context_path: <%= @node[:trinidad][:apps][name][:context] %>
+     <% end %>
+  <% end %>
