@@ -1,9 +1,0 @@
-include_recipe 'monit::default'
-
-template "/etc/monit/conf.d/apache.monitrc" do
-  source "apache2.erb"
-  owner "root"
-  group "root"
-  mode 0644
-  notifies :restart, resources(:service => "monit")
-end

@@ -1,8 +1,0 @@
-<% if @node[:apt] && @node[:apt][:pins] %>
-<% @node[:apt][:pins].each do |key, value| %>
-Package: <%= value[0].join(' ') %>
-Pin: <%= value[1] %>
-Pin-Priority: <%= value[2] %>
-
-<% end %>
-<% end %>

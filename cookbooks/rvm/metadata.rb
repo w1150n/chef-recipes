@@ -1,3 +1,0 @@
-
-depends "git"
-depends "users"

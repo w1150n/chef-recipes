@@ -1,5 +1,0 @@
-check process memcached with pidfile /var/run/memcached.pid
-  group memcached
-    start program = "/etc/init.d/memcached start"
-    stop program = "/etc/init.d/memcached stop"
-    if failed host <%= @ipaddress %> port <%= @port %> then restart

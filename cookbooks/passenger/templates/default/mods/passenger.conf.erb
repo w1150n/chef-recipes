@@ -1,8 +1,0 @@
-<IfModule mod_passenger.c>
-  PassengerRoot "<%= @configuration[:passengerroot] %>"
-  PassengerRuby "<%= @configuration[:passengerruby] %>"
-  PassengerMaxPoolSize "<%= @node[:passenger][:passengermaxpoolsize] %>"         
-  PassengerMaxRequests "<%= @node[:passenger][:passengermaxrequests] %>"
-  PassengerPoolIdleTime "<%= @node[:passenger][:passengerpoolidletime] %>"
-  RailsAppSpawnerIdleTime "<%= @node[:passenger][:railsappspawneridletime] %>"
-</IfModule>
