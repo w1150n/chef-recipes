@@ -1,16 +1,27 @@
 {
-  "version": "0.0.0",
-  "replacing": {
-  },
   "maintainer_email": "youremail@example.com",
   "description": "A fabulous new cookbook",
+  "recipes": {
+  },
   "groupings": {
   },
   "recommendations": {
   },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "platforms": {
+  },
+  "license": "Apache v2.0",
+  "version": "0.0.0",
+  "providing": {
+  },
+  "name": "users",
   "attributes": {
   },
-  "suggestions": {
+  "maintainer": "Your Name",
+  "replacing": {
   },
   "dependencies": {
     "sudo": [
@@ -23,16 +34,5 @@
 
     ]
   },
-  "long_description": "",
-  "conflicting": {
-  },
-  "license": "Apache v2.0",
-  "name": "users",
-  "providing": {
-  },
-  "recipes": {
-  },
-  "platforms": {
-  },
-  "maintainer": "Your Name"
+  "long_description": ""
 }

@@ -1,16 +1,27 @@
 {
-  "version": "0.0.0",
-  "replacing": {
-  },
   "maintainer_email": "youremail@example.com",
   "description": "A fabulous new cookbook",
+  "recipes": {
+  },
   "groupings": {
   },
   "recommendations": {
   },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "platforms": {
+  },
+  "license": "Apache v2.0",
+  "version": "0.0.0",
+  "providing": {
+  },
+  "name": "rvm",
   "attributes": {
   },
-  "suggestions": {
+  "maintainer": "Your Name",
+  "replacing": {
   },
   "dependencies": {
     "git": [
@@ -20,16 +31,5 @@
 
     ]
   },
-  "long_description": "",
-  "conflicting": {
-  },
-  "license": "Apache v2.0",
-  "name": "rvm",
-  "providing": {
-  },
-  "recipes": {
-  },
-  "platforms": {
-  },
-  "maintainer": "Your Name"
+  "long_description": ""
 }

@@ -1,29 +1,29 @@
 {
-  "version": "0.1.0",
-  "replacing": {
-  },
   "maintainer_email": "ops@example.com",
   "description": "Installs/Configures backups",
+  "recipes": {
+  },
   "groupings": {
   },
   "recommendations": {
   },
-  "attributes": {
-  },
   "suggestions": {
   },
-  "dependencies": {
-  },
-  "long_description": "= DESCRIPTION:\n\nThis recipe install backups infraestructure on the machine. \nBackups infraestructure is based on s3 and some programs (s3cmd, duplicity) \nthat  copy files, dumps and logs to it through a shell script that is being \nrunned in cron.\n\n= REQUIREMENTS:\n\nRuby installed on the machine since the script uses ruby.\n\n= ATTRIBUTES: \n\nNothing special.\n\n= USAGE:\n\nInclude the recipe to install s3cmd and duplicity, it also install backups \nscript that has an yml configuration file that you should use on per machine\nbasis (see http://wiki.opscode.com/display/chef/Files#Files-FileSpecificity).\n\nYou also have to configure s3cfg template so it contains s3 configuration for\ns3cmd. See files/default/s3cfg.\n\nThe recipe installs a cronjob that runs the backup script daily.\n",
   "conflicting": {
-  },
-  "license": "Apache 2.0",
-  "name": "backups",
-  "providing": {
-  },
-  "recipes": {
   },
   "platforms": {
   },
-  "maintainer": "Example Com"
+  "license": "Apache 2.0",
+  "version": "0.1.0",
+  "providing": {
+  },
+  "name": "backups",
+  "attributes": {
+  },
+  "maintainer": "Example Com",
+  "replacing": {
+  },
+  "dependencies": {
+  },
+  "long_description": "= DESCRIPTION:\n\nThis recipe install backups infraestructure on the machine. \nBackups infraestructure is based on s3 and some programs (s3cmd, duplicity) \nthat  copy files, dumps and logs to it through a shell script that is being \nrunned in cron.\n\n= REQUIREMENTS:\n\nRuby installed on the machine since the script uses ruby.\n\n= ATTRIBUTES: \n\nNothing special.\n\n= USAGE:\n\nInclude the recipe to install s3cmd and duplicity, it also install backups \nscript that has an yml configuration file that you should use on per machine\nbasis (see http://wiki.opscode.com/display/chef/Files#Files-FileSpecificity).\n\nYou also have to configure s3cfg template so it contains s3 configuration for\ns3cmd. See files/default/s3cfg.\n\nThe recipe installs a cronjob that runs the backup script daily.\n"
 }
