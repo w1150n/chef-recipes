@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "maintainer_email": "youremail@example.com",
   "description": "A fabulous new cookbook",
   "recipes": {
@@ -23,15 +22,6 @@
   },
   "maintainer": "Your Name",
   "replacing": {
-=======
-  "name": "rvm",
-  "description": "A fabulous new cookbook",
-  "long_description": "",
-  "maintainer": "Your Name",
-  "maintainer_email": "youremail@example.com",
-  "license": "Apache v2.0",
-  "platforms": {
->>>>>>> 63d4fb4220dffcdb559a9513f843bda8e7f70976
   },
   "dependencies": {
     "git": [
@@ -41,25 +31,5 @@
 
     ]
   },
-<<<<<<< HEAD
   "long_description": ""
-=======
-  "recommendations": {
-  },
-  "suggestions": {
-  },
-  "conflicting": {
-  },
-  "providing": {
-  },
-  "replacing": {
-  },
-  "attributes": {
-  },
-  "groupings": {
-  },
-  "recipes": {
-  },
-  "version": "0.0.0"
->>>>>>> 63d4fb4220dffcdb559a9513f843bda8e7f70976
 }
