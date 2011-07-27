@@ -25,5 +25,5 @@
   },
   "dependencies": {
   },
-  "long_description": "= DESCRIPTION:\n\nRecipe for compiling and installing a ruby-1.9.2 compatible version of ruby-shadow.\n\nThis is a pretty quick fix for getting ruby-shadow c
+  "long_description": "= DESCRIPTION:\n\nRecipe for compiling and installing a ruby-1.9.2 compatible version of ruby-shadow.\n\nThis is a pretty quick fix for getting ruby-shadow compatible with the ruby 1.9 C extension API. It will not work with ruby 1.8.\n\nBased on the 37 Signals ruby-shadow cookbook."
 }
