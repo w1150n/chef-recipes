@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "maintainer_email": "jacobo.garcia@gmai.com",
   "description": "Installs/Configures differnt passenger flavours",
   "recipes": {
@@ -23,15 +22,6 @@
   },
   "maintainer": "Jacobo García López de Araujo",
   "replacing": {
-=======
-  "name": "passenger",
-  "description": "Installs/Configures differnt passenger flavours",
-  "long_description": "= DESCRIPTION:\n\nPassenger cookbook, provides several method of installing and configuring passenger.\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n\n",
-  "maintainer": "Jacobo García López de Araujo",
-  "maintainer_email": "jacobo.garcia@gmai.com",
-  "license": "Apache 2.0",
-  "platforms": {
->>>>>>> 63d4fb4220dffcdb559a9513f843bda8e7f70976
   },
   "dependencies": {
     "apt": [
@@ -44,25 +34,5 @@
 
     ]
   },
-<<<<<<< HEAD
   "long_description": "= DESCRIPTION:\n\nPassenger cookbook, provides several method of installing and configuring passenger.\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n\n"
-=======
-  "recommendations": {
-  },
-  "suggestions": {
-  },
-  "conflicting": {
-  },
-  "providing": {
-  },
-  "replacing": {
-  },
-  "attributes": {
-  },
-  "groupings": {
-  },
-  "recipes": {
-  },
-  "version": "0.1.0"
->>>>>>> 63d4fb4220dffcdb559a9513f843bda8e7f70976
 }
