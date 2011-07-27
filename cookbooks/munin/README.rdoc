@@ -1,0 +1,23 @@
+= DESCRIPTION:
+
+Recipe that installs and configures munin. Includes recipes for configuring munin-server and munin-nodes.
+
+= REQUIREMENTS:
+
+Ubuntu 8.04 / Ubuntu 10.04
+
+= ATTRIBUTES: 
+
+For munin: 
+
+* muninmaster address so the clients know where to report.
+
+= USAGE:
+
+Include munin recipe to add munin support with some extra plugins:
+
+* passenger memory stats
+* passenger stats
+* memcached
+
+Munin recipe also enables some interesting plugins not enabled by default, it also disables some plugins that I think are not useful at all.

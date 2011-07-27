@@ -1,0 +1,29 @@
+{
+  "name": "backups",
+  "description": "Installs/Configures backups",
+  "long_description": "= DESCRIPTION:\n\nThis recipe install backups infraestructure on the machine. \nBackups infraestructure is based on s3 and some programs (s3cmd, duplicity) \
+  "maintainer": "Example Com",
+  "maintainer_email": "ops@example.com",
+  "license": "Apache 2.0",
+  "platforms": {
+  },
+  "dependencies": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.0"
+}

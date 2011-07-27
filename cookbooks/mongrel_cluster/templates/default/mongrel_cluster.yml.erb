@@ -1,0 +1,10 @@
+---
+cwd: <%= "#{@path}/current/" %>
+log_file: <%= "#{@path}/shared" %>/log/mongrel.log
+port: <%= @port %>
+environment: production
+address: 127.0.0.1
+pid_file: <%= "#{@path}/shared" %>/pids/mongrel.pid
+servers: <%= @mongrels %>
+user: <%= @user %>
+group: <%= @group %>

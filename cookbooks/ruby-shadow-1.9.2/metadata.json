@@ -1,0 +1,29 @@
+{
+  "maintainer_email": "admin@webpop.com",
+  "description": "Installs and configures all aspects of apache2 using Debian style symlinks with helper definitions",
+  "recipes": {
+  },
+  "groupings": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "platforms": {
+  },
+  "license": "Apache 2.0",
+  "version": "0.0.1",
+  "providing": {
+  },
+  "name": "ruby-shadow-1.9.2",
+  "attributes": {
+  },
+  "maintainer": "Webpop",
+  "replacing": {
+  },
+  "dependencies": {
+  },
+  "long_description": "= DESCRIPTION:\n\nRecipe for compiling and installing a ruby-1.9.2 compatible version of ruby-shadow.\n\nThis is a pretty quick fix for getting ruby-shadow c
+}

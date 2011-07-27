@@ -1,0 +1,39 @@
+#!/bin/sh
+
+set -e
+
+NAME=trinidad
+PIDFILE=/var/run/trinidad/trinidad.pid
+DAEMON="/usr/local/bin/trinidad"
+DAEMON_OPTS="--config=/etc/trinidad/trinidad.yml"
+USER=<%= @node[:trinidad][:daemon_user] %>
+APPDIR=<%= @node[:trinidad][:applications_home] %>
+
+export JAVA_OPTS="-server -Xmx<%= @node[:trinidad][:java_xmx] %> -Xms<%= @node[:trinidad][:java_xms] %> -XX:PermSize=512m -XX:MaxPermSize=512m -XX:NewRatio=2 -XX:+DisableExplicitGC -Dhk2.file.directory.changeIntervalTimer=6000 -Xss2048k -XX:ParallelGCThreads=4 -XX:+AggressiveHeap"
+
+export PATH="${PATH:+$PATH:}/usr/sbin:/sbin"
+
+case "$1" in
+  start)
+        echo -n "Starting daemon: "$NAME
+	start-stop-daemon --start --chdir $APPDIR --quiet --chuid $USER --pidfile $PIDFILE --exec $DAEMON -- $DAEMON_OPTS
+        echo "."
+	;;
+  stop)
+        echo -n "Stopping daemon: "$NAME
+	start-stop-daemon --stop --chdir $APPDIR --quiet --chuid $USER --oknodo --pidfile $PIDFILE
+        echo "."
+	;;
+  restart)
+        echo -n "Restarting daemon: "$NAME
+	start-stop-daemon --stop --chdir $APPDIR --quiet --chuid $USER --oknodo --retry 30 --pidfile $PIDFILE
+	start-stop-daemon --start --chdir $APPDIR --quiet --chuid $USER --pidfile $PIDFILE --exec $DAEMON -- $DAEMON_OPTS
+	echo "."
+	;;
+
+  *)
+	echo "Usage: "$1" {start|stop|restart}"
+	exit 1
+esac
+
+exit 0

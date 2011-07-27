@@ -1,0 +1,3 @@
+set mailserver localhost
+include /etc/monit/conf.d/*.monitrc
+set daemon 60

@@ -1,0 +1,31 @@
+ <VirtualHost *:80>
+  ServerName <%= @params[:server_name] %>
+  DocumentRoot <%= @params[:docroot] %>
+
+  <Directory <%= @params[:docroot] %>>
+    Options FollowSymLinks
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+
+    AuthType Basic
+    AuthName <%= @params[:name] %>
+    AuthUserFile /etc/apache2/passwords
+    Require valid-user  
+  </Directory>
+
+  Alias /awstatsclasses "/usr/share/awstats/lib/" 
+  Alias /awstatscss "/usr/share/awstats/css/" 
+  Alias /awstats-icon "/usr/share/awstats/icon/" 
+  ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+  ScriptAlias /awstats/ /usr/lib/cgi-bin/
+  Options ExecCGI -MultiViews +SymLinksIfOwnerMatch
+
+  RewriteEngine On
+  RewriteLog <%= @node[:apache][:log_dir] %>/<%= @application_name %>-rewrite.log
+  RewriteLogLevel 0
+
+  LogLevel info
+  ErrorLog <%= @node[:apache][:log_dir] %>/<%= @params[:name] %>-error.log
+  CustomLog <%= @node[:apache][:log_dir] %>/<%= @params[:name] %>-access.log combined
+</VirtualHost>

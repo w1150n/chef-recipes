@@ -1,0 +1,6 @@
+set[:jruby][:version] = "1.6.2"
+set[:jruby][:checksum] = "4414c9d7d1c2e4494176d8131e925a827be8ade0"
+set[:jruby][:url] = "http://jruby.org.s3.amazonaws.com/downloads/#{jruby[:version]}/jruby-bin-#{jruby[:version]}.tar.gz"
+set[:jruby][:extract_path] = "/var/tmp"
+set[:jruby][:install_path] = "/usr/local"
+set[:jruby][:bin_path] = "#{jruby[:install_path]}/jruby-#{jruby[:version]}/bin"

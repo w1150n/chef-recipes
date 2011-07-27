@@ -1,0 +1,38 @@
+{
+  "maintainer_email": "youremail@example.com",
+  "description": "A fabulous new cookbook",
+  "recipes": {
+  },
+  "groupings": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "platforms": {
+  },
+  "license": "Apache v2.0",
+  "version": "0.0.0",
+  "providing": {
+  },
+  "name": "users",
+  "attributes": {
+  },
+  "maintainer": "Your Name",
+  "replacing": {
+  },
+  "dependencies": {
+    "ssh_keys": [
+
+    ],
+    "sudo": [
+
+    ],
+    "ruby-shadow-1.9.2": [
+
+    ]
+  },
+  "long_description": ""
+}

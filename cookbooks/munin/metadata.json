@@ -1,0 +1,29 @@
+{
+  "maintainer_email": "jacobo.garcia@gmail.com",
+  "description": "Installs/Configures munin server and client",
+  "recipes": {
+  },
+  "groupings": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "platforms": {
+  },
+  "license": "Apache 2.0",
+  "version": "0.1.0",
+  "providing": {
+  },
+  "name": "munin",
+  "attributes": {
+  },
+  "maintainer": "Jacobo Garc��a L��pez de Araujo",
+  "replacing": {
+  },
+  "dependencies": {
+  },
+  "long_description": "= DESCRIPTION:\n\nRecipe that installs and configures munin. Includes recipes for configuring munin-server and munin-nodes.\n\n= REQUIREMENTS:\n\nUbuntu 8.04
+}

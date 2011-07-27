@@ -1,0 +1,29 @@
+{
+  "maintainer_email": "ops@example.com",
+  "description": "Installs/Configures logrotate",
+  "recipes": {
+  },
+  "groupings": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "platforms": {
+  },
+  "license": "Apache 2.0",
+  "version": "0.1.0",
+  "providing": {
+  },
+  "name": "logrotate",
+  "attributes": {
+  },
+  "maintainer": "Example Com",
+  "replacing": {
+  },
+  "dependencies": {
+  },
+  "long_description": "= DESCRIPTION:\n\nLogrotate file\n\n= REQUIREMENTS:\n\nNothing special\n\n= ATTRIBUTES: \n\n:services is an array of services that are included in the rotati
+}

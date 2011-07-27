@@ -1,0 +1,29 @@
+{
+  "maintainer_email": "ops@example.com",
+  "description": "Installs/Configures security",
+  "recipes": {
+  },
+  "groupings": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "platforms": {
+  },
+  "license": "Apache 2.0",
+  "version": "0.1.0",
+  "providing": {
+  },
+  "name": "denyhosts",
+  "attributes": {
+  },
+  "maintainer": "Example Com",
+  "replacing": {
+  },
+  "dependencies": {
+  },
+  "long_description": "= DESCRIPTION:\n\nRecipe for installing and configuring denyhosts package. \n\n= REQUIREMENTS:\n\nRuby for unban-ip script\n\n= ATTRIBUTES: \n\nNo attributes
+}

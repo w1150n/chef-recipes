@@ -1,0 +1,40 @@
+<VirtualHost *:80>
+  ServerName <%= @params[:server_name] %>
+  ServerAlias <% @params[:server_aliases].each do |a| %><%= "#{a}" %> <% end %>
+  DocumentRoot <%= @params[:docroot] %>
+
+  <% if @params[:rails_version] && @params[:rails_version] == "3" %>
+   RackBaseURI /  
+  <% else %>
+   RailsBaseURI /            
+  <% end %>       
+
+  <% if @params[:rails_env] %>   
+  RailsEnv <%= @params[:rails_env] %>
+  <% end %>
+
+  <% if @params[:passengerinstances] %>
+     PassengerMinInstances <%= @params[:passengerinstances] %>
+  <% end %>
+
+  <Directory <%= @params[:docroot] %>>
+    Options FollowSymLinks
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  RewriteEngine On
+  RewriteLog <%= @node[:apache][:log_dir] %>/<%= @application_name %>-rewrite.log
+  RewriteLogLevel 0
+
+  ErrorDocument 503 /system/maintenance.html
+  RewriteCond %{DOCUMENT_ROOT}/system/maintenance.html -f
+  RewriteCond %{SCRIPT_FILENAME} !maintenance.html
+  RewriteCond %{SCRIPT_FILENAME} !^(.+).(gif|jpg|css)$
+  RewriteRule ^.*$ /system/maintenance.html [R=503,L]  
+
+  LogLevel info
+  ErrorLog <%= @node[:apache][:log_dir] %>/<%= @params[:name] %>-error.log
+  CustomLog <%= @node[:apache][:log_dir] %>/<%= @params[:name] %>-access.log combined
+</VirtualHost>

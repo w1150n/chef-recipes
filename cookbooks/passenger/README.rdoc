@@ -1,0 +1,11 @@
+= DESCRIPTION:
+
+Passenger cookbook, provides several method of installing and configuring passenger.
+
+= REQUIREMENTS:
+
+= ATTRIBUTES: 
+
+= USAGE:
+
+

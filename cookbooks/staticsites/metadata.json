@@ -1,0 +1,58 @@
+{
+<<<<<<< HEAD
+  "maintainer_email": "ops@example.com",
+  "description": "Installs/Configures staticsites",
+  "recipes": {
+  },
+  "groupings": {
+=======
+  "name": "staticsites",
+  "description": "Installs/Configures staticsites",
+  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n",
+  "maintainer": "Example Com",
+  "maintainer_email": "ops@example.com",
+  "license": "Apache 2.0",
+  "platforms": {
+>>>>>>> 63d4fb4220dffcdb559a9513f843bda8e7f70976
+  },
+  "dependencies": {
+  },
+<<<<<<< HEAD
+=======
+  "recommendations": {
+  },
+>>>>>>> 63d4fb4220dffcdb559a9513f843bda8e7f70976
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+<<<<<<< HEAD
+  "platforms": {
+  },
+  "license": "Apache 2.0",
+  "version": "0.1.0",
+  "providing": {
+  },
+  "name": "staticsites",
+  "attributes": {
+  },
+  "maintainer": "Example Com",
+  "replacing": {
+  },
+  "dependencies": {
+  },
+  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\n= USAGE:\n\n"
+=======
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.0"
+>>>>>>> 63d4fb4220dffcdb559a9513f843bda8e7f70976
+}
