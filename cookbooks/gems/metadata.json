@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "maintainer_email": "ops@example.com",
   "description": "Installs/Configures gems",
   "recipes": {
@@ -23,15 +22,6 @@
   },
   "maintainer": "Example Com",
   "replacing": {
-=======
-  "name": "gems",
-  "description": "Installs/Configures gems",
-  "long_description": "= DESCRIPTION:\n\nThis recipe install some default gems and it's library dependencies (if needed). \nIt's designed to detect an instalation of Ruby Enterprise and use this path to\ninstall the gems.\n\n= REQUIREMENTS:\n\nThis recipe works in Ubuntu/Debian, requires ruby/ree.\n\n= ATTRIBUTES: \n\nJust the binary path, that the recipe tries to autodetect. \nYou should add the gems and dependencies you want to install. \n\n= USAGE:\n\nInclude the recipe to install gems and dependencies.\n",
-  "maintainer": "Example Com",
-  "maintainer_email": "ops@example.com",
-  "license": "Apache 2.0",
-  "platforms": {
->>>>>>> 63d4fb4220dffcdb559a9513f843bda8e7f70976
   },
   "dependencies": {
     "ree": [
@@ -41,25 +31,5 @@
 
     ]
   },
-<<<<<<< HEAD
   "long_description": "= DESCRIPTION:\n\nThis recipe install some default gems and it's library dependencies (if needed). \nIt's designed to detect an instalation of Ruby Enterprise and use this path to\ninstall the gems.\n\n= REQUIREMENTS:\n\nThis recipe works in Ubuntu/Debian, requires ruby/ree.\n\n= ATTRIBUTES: \n\nJust the binary path, that the recipe tries to autodetect. \nYou should add the gems and dependencies you want to install. \n\n= USAGE:\n\nInclude the recipe to install gems and dependencies.\n"
-=======
-  "recommendations": {
-  },
-  "suggestions": {
-  },
-  "conflicting": {
-  },
-  "providing": {
-  },
-  "replacing": {
-  },
-  "attributes": {
-  },
-  "groupings": {
-  },
-  "recipes": {
-  },
-  "version": "0.1.0"
->>>>>>> 63d4fb4220dffcdb559a9513f843bda8e7f70976
 }
