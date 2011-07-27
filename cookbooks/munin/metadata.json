@@ -5,6 +5,8 @@
   },
   "groupings": {
   },
+  "dependencies": {
+  },
   "recommendations": {
   },
   "suggestions": {
@@ -20,7 +22,7 @@
   "name": "munin",
   "attributes": {
   },
-  "maintainer": "Jacobo Garc��a L��pez de Araujo",
+  "maintainer": "Jacobo Garcia Lopez de Araujo",
   "replacing": {
   },
   "dependencies": {
