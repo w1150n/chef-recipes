@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "maintainer_email": "sysadmins@37signals.com",
   "description": "Configures sudo",
   "recipes": {
@@ -23,15 +22,6 @@
   },
   "maintainer": "37signals",
   "replacing": {
-=======
-  "name": "sudo",
-  "description": "Configures sudo",
-  "long_description": "",
-  "maintainer": "37signals",
-  "maintainer_email": "sysadmins@37signals.com",
-  "license": "Apache v2.0",
-  "platforms": {
->>>>>>> 63d4fb4220dffcdb559a9513f843bda8e7f70976
   },
   "dependencies": {
     "users": [
@@ -41,25 +31,5 @@
 
     ]
   },
-<<<<<<< HEAD
   "long_description": ""
-=======
-  "recommendations": {
-  },
-  "suggestions": {
-  },
-  "conflicting": {
-  },
-  "providing": {
-  },
-  "replacing": {
-  },
-  "attributes": {
-  },
-  "groupings": {
-  },
-  "recipes": {
-  },
-  "version": "0.1.0"
->>>>>>> 63d4fb4220dffcdb559a9513f843bda8e7f70976
 }
