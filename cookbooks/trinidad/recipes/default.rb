@@ -31,12 +31,12 @@ directory "/etc/trinidad" do
   mode "0755"
 end
 
-template "/etc/trinidad/trinidad.yml" do
-  source "trinidad.yml.erb"
-  mode "0755"
-  owner "root"
-  group "root"
-end
+#template "/etc/trinidad/trinidad.yml" do
+#  source "trinidad.yml.erb"
+#  mode "0755"
+#  owner "root"
+#  group "root"
+#end
 
 execute "#{node[:jruby][:bin_path]}/jruby -S gem install trinidad_daemon_extension" do
   not_if "#{node[:jruby][:bin_path]}/jruby -S gem list --local | grep trinidad_daemon_extension"

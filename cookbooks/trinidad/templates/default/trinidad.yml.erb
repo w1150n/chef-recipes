@@ -9,11 +9,11 @@
 #  extensions:
 #    daemon:
 #      pid_file: /var/run/trinidad/trinidad.pid
-  web_apps:
-  <% @node[:trinidad][:apps].keys.each do |name| %>
-     <%= name %>:
-       web_app_dir: <%= "#{@node[:trinidad][:applications_home]}/#{name}/app/current" %>
-     <% if @node[:trinidad][:apps][name][:context]  %>
-       context_path: <%= @node[:trinidad][:apps][name][:context] %>
-     <% end %>
+#  web_apps:
+#  <% @node[:trinidad][:apps].keys.each do |name| %>
+#     <%= name %>:
+#       web_app_dir: <%= "#{@node[:trinidad][:applications_home]}/#{name}/app/current" %>
+#     <% if @node[:trinidad][:apps][name][:context]  %>
+#       context_path: <%= @node[:trinidad][:apps][name][:context] %>
+#     <% end %>
   <% end %>

@@ -1,16 +1,9 @@
 {
-  "name": "trinidad",
-  "description": "A fabulous new cookbook",
-  "long_description": "",
-  "maintainer": "Your Name",
   "maintainer_email": "youremail@example.com",
-  "license": "Apache v2.0",
-  "platforms": {
+  "description": "A fabulous new cookbook",
+  "recipes": {
   },
-  "dependencies": {
-    "jruby": [
-
-    ]
+  "groupings": {
   },
   "recommendations": {
   },
@@ -18,15 +11,22 @@
   },
   "conflicting": {
   },
+  "platforms": {
+  },
+  "license": "Apache v2.0",
+  "version": "0.0.0",
   "providing": {
   },
-  "replacing": {
-  },
+  "name": "trinidad",
   "attributes": {
   },
-  "groupings": {
+  "maintainer": "Your Name",
+  "replacing": {
   },
-  "recipes": {
+  "dependencies": {
+    "jruby": [
+
+    ]
   },
-  "version": "0.0.0"
+  "long_description": ""
 }

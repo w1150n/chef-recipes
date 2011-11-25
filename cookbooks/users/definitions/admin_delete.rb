@@ -1,7 +1,7 @@
 define :admin_delete do
 
   u=params[:name]
-  u="rgo"
+  u="therobot"
   execute "find / -path /proc -prune -o -user #{u} -delete" do
     creates "/var/tmp/.deleted-files-#{u}"
     returns 1

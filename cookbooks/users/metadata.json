@@ -24,10 +24,10 @@
   "replacing": {
   },
   "dependencies": {
-    "ssh_keys": [
+    "sudo": [
 
     ],
-    "sudo": [
+    "ssh_keys": [
 
     ],
     "ruby-shadow-1.9.2": [
